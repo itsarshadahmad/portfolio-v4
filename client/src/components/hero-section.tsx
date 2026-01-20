@@ -68,7 +68,7 @@ export function HeroSection() {
     <section id="about" className="min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-24">
       <div className="max-w-6xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-          <div className="lg:col-span-3 space-y-8">
+          <div className="lg:col-span-3 space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               <p className="text-primary font-mono text-sm tracking-wide uppercase">
                 Hello, I'm
@@ -83,11 +83,11 @@ export function HeroSection() {
               </h2>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
               {bio}
             </p>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
               {techStack.map((tag) => (
                 <Badge
                   key={tag}
@@ -100,7 +100,7 @@ export function HeroSection() {
               ))}
             </div>
 
-            <div className="flex items-center gap-4 text-sm text-muted-foreground font-medium">
+            <div className="flex items-center justify-center lg:justify-start gap-4 text-sm text-muted-foreground font-medium">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-chart-4"></span>
                 {yearsExperience}+ Years Experience
@@ -111,7 +111,7 @@ export function HeroSection() {
               <span className="hidden sm:inline">Cloud/DevOps</span>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button
                 size="lg"
                 asChild
@@ -142,7 +142,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="lg:col-span-2 flex justify-center lg:justify-end">
+          <div className="lg:col-span-2 flex justify-center lg:justify-end order-first lg:order-last">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-chart-3/20 rounded-2xl blur-3xl"></div>
               <Avatar className="w-64 h-64 md:w-80 md:h-80 rounded-2xl shadow-2xl relative border-4 border-background">
