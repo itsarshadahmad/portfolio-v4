@@ -27,7 +27,7 @@ export function HeroSection() {
 
   if (isLoading) {
     return (
-      <section id="about" className="min-h-screen flex items-center pt-16 pb-16 md:pb-24">
+      <section id="about" className="min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-24">
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-3 space-y-8">
@@ -65,7 +65,7 @@ export function HeroSection() {
   const linkedIn = profile?.linkedIn || "https://linkedin.com/in/yourprofile";
 
   return (
-    <section id="about" className="min-h-screen flex items-center pt-16 pb-16 md:pb-24">
+    <section id="about" className="min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-24">
       <div className="max-w-6xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-3 space-y-8">

@@ -2,7 +2,7 @@ import type { FullPortfolio } from "@shared/schema";
 
 export const portfolioData: FullPortfolio = {
   profile: {
-    name: "Your Name",
+    name: "Arshad Ahmad",
     title: "Cloud & DevOps Engineer",
     tagline: "Building scalable cloud infrastructure and automating deployments",
     bio: "2+ years of experience in full-stack development and DevOps practices, passionate about creating efficient, reliable systems.",
@@ -94,16 +94,20 @@ export const portfolioData: FullPortfolio = {
   ],
   skills: [
     { name: "AWS", category: "cloud" },
+    { name: "IBM Cloud", category: "cloud" },
     { name: "Docker", category: "devops" },
     { name: "Kubernetes", category: "devops" },
+    { name: "Jenkins", category: "devops" },
+    { name: "GitHub Actions", category: "devops" },
+    { name: "Prometheus", category: "devops" },
+    { name: "Grafana", category: "devops" },
     { name: "Terraform", category: "cloud" },
     { name: "React", category: "development" },
     { name: "Node.js", category: "development" },
     { name: "TypeScript", category: "development" },
     { name: "Python", category: "development" },
     { name: "PostgreSQL", category: "tools" },
-    { name: "Redis", category: "tools" },
-    { name: "GitHub Actions", category: "devops" },
+    { name: "MongoDB", category: "tools" },
     { name: "Linux", category: "tools" },
   ],
 };

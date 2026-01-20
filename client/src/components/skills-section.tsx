@@ -3,20 +3,24 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Cloud, Container, Code2, Wrench } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import type { Skill } from "@shared/schema";
-import { SiAmazon, SiDocker, SiKubernetes, SiTerraform, SiReact, SiNodedotjs, SiTypescript, SiPython, SiPostgresql, SiRedis, SiGithubactions, SiLinux } from "react-icons/si";
+import { SiAmazon, SiDocker, SiKubernetes, SiTerraform, SiReact, SiNodedotjs, SiTypescript, SiPython, SiPostgresql, SiMongodb, SiGithubactions, SiLinux, SiJenkins, SiPrometheus, SiGrafana } from "react-icons/si";
 
 const skillIcons: Record<string, React.ReactNode> = {
   "AWS": <SiAmazon className="w-6 h-6" />,
+  "IBM Cloud": <Cloud className="w-6 h-6" />,
   "Docker": <SiDocker className="w-6 h-6" />,
   "Kubernetes": <SiKubernetes className="w-6 h-6" />,
+  "Jenkins": <SiJenkins className="w-6 h-6" />,
   "Terraform": <SiTerraform className="w-6 h-6" />,
   "React": <SiReact className="w-6 h-6" />,
   "Node.js": <SiNodedotjs className="w-6 h-6" />,
   "TypeScript": <SiTypescript className="w-6 h-6" />,
   "Python": <SiPython className="w-6 h-6" />,
   "PostgreSQL": <SiPostgresql className="w-6 h-6" />,
-  "Redis": <SiRedis className="w-6 h-6" />,
+  "MongoDB": <SiMongodb className="w-6 h-6" />,
   "GitHub Actions": <SiGithubactions className="w-6 h-6" />,
+  "Prometheus": <SiPrometheus className="w-6 h-6" />,
+  "Grafana": <SiGrafana className="w-6 h-6" />,
   "Linux": <SiLinux className="w-6 h-6" />,
 };
 
