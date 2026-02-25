@@ -35,3 +35,15 @@ Project layout:
 - Preview command: `npm run preview`
 
 This project is optimized for static hosting.
+
+
+## Netlify deployment
+
+This repo includes a `netlify.toml` configured for SPA hosting.
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node version: `20`
+- SPA redirects: all routes -> `index.html`
+
+You can connect this GitHub repo directly in Netlify and deploy with defaults.
