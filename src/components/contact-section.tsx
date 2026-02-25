@@ -2,13 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Linkedin, Mail, Github, Twitter, Download } from "lucide-react";
-import { useQuery } from "@tanstack/react-query";
-import type { PortfolioData } from "@shared/schema";
+import { portfolioData } from "@/data/portfolio-data";
 
 export function ContactSection() {
-  const { data: profile, isLoading } = useQuery<PortfolioData>({
-    queryKey: ["/api/portfolio/profile"],
-  });
+  const profile = portfolioData.profile;
+  const isLoading = false;
 
   if (isLoading) {
     return (

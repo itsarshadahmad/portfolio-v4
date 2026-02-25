@@ -1,12 +1,9 @@
 import { Linkedin, Github, Twitter, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useQuery } from "@tanstack/react-query";
-import type { PortfolioData } from "@shared/schema";
+import { portfolioData } from "@/data/portfolio-data";
 
 export function Footer() {
-  const { data: profile } = useQuery<PortfolioData>({
-    queryKey: ["/api/portfolio/profile"],
-  });
+  const profile = portfolioData.profile;
 
   const currentYear = new Date().getFullYear();
   const name = profile?.name || "Your Name";

@@ -2,13 +2,11 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Briefcase } from "lucide-react";
-import { useQuery } from "@tanstack/react-query";
-import type { Experience } from "@shared/schema";
+import { portfolioData } from "@/data/portfolio-data";
 
 export function ExperienceSection() {
-  const { data: experiences, isLoading } = useQuery<Experience[]>({
-    queryKey: ["/api/portfolio/experiences"],
-  });
+  const experiences = portfolioData.experiences;
+  const isLoading = false;
 
   if (isLoading) {
     return (

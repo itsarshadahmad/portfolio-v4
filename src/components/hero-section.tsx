@@ -3,13 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useQuery } from "@tanstack/react-query";
-import type { PortfolioData } from "@shared/schema";
+import { portfolioData } from "@/data/portfolio-data";
 
 export function HeroSection() {
-  const { data: profile, isLoading } = useQuery<PortfolioData>({
-    queryKey: ["/api/portfolio/profile"],
-  });
+  const profile = portfolioData.profile;
+  const isLoading = false;
 
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
