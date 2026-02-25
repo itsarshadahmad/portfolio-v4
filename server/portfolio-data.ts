@@ -3,24 +3,24 @@ import type { FullPortfolio } from "@shared/schema";
 export const portfolioData: FullPortfolio = {
   profile: {
     name: "Arshad Ahmad",
-    title: "Cloud & DevOps Engineer",
-    tagline: "Building scalable cloud infrastructure and automating deployments",
-    bio: "2+ years of experience in full-stack development and DevOps practices, passionate about creating efficient, reliable systems.",
-    email: "your.email@example.com",
-    linkedIn: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/yourusername",
-    twitter: "https://twitter.com/yourhandle",
+    title: "Full Stack Developer",
+    tagline: "Building scalable apps with infrastructure and automating deployments",
+    bio: "2 years of experience in full-stack development and DevOps practices, passionate about creating efficient, reliable systems.",
+    email: "arshadxdev@gmail.com",
+    linkedIn: "https://linkedin.com/in/itsarshadahmad",
+    github: "https://github.com/itsarshadahmad",
+    // twitter: "https://twitter.com/yourhandle",
     resumeUrl: "#",
     profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    techStack: ["AWS", "Docker", "Kubernetes", "Terraform", "React", "Node.js"],
+    techStack: ["AWS", "Docker", "Kubernetes", "Next.js", "React", "Node.js"],
     yearsExperience: 2,
   },
   experiences: [
     {
       id: "1",
-      role: "Cloud & DevOps Engineer",
-      company: "Tech Company Inc.",
-      duration: "2023 - Present",
+      role: "Software Developer",
+      company: "Aumble",
+      duration: "Apr 2025 - Present",
       description: "Leading cloud infrastructure and DevOps practices for enterprise applications.",
       achievements: [
         "Reduced deployment time by 60% through CI/CD pipeline optimization",
@@ -31,9 +31,9 @@ export const portfolioData: FullPortfolio = {
     },
     {
       id: "2",
-      role: "Full Stack Developer",
-      company: "Startup XYZ",
-      duration: "2022 - 2023",
+      role: "Full Stack Developer Intern",
+      company: "To-Let Globe",
+      duration: "Jan 2025 - Mar 2025",
       description: "Developed and maintained scalable web applications from concept to deployment.",
       achievements: [
         "Built responsive web applications serving 50k+ monthly users",
