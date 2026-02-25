@@ -1,17 +1,18 @@
-import type { FullPortfolio } from "@shared/schema";
+import type { FullPortfolio } from "@/types/portfolio";
 
 export const portfolioData: FullPortfolio = {
   profile: {
     name: "Arshad Ahmad",
     title: "Full Stack Developer",
-    tagline: "Building scalable apps with infrastructure and automating deployments",
+    tagline:
+      "Building scalable apps with infrastructure and automating deployments",
     bio: "2 years of experience in full-stack development and DevOps practices, passionate about creating efficient, reliable systems.",
     email: "arshadxdev@gmail.com",
     linkedIn: "https://linkedin.com/in/itsarshadahmad",
     github: "https://github.com/itsarshadahmad",
-    // twitter: "https://twitter.com/yourhandle",
     resumeUrl: "#",
-    profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    profileImage:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     techStack: ["AWS", "Docker", "Kubernetes", "Next.js", "React", "Node.js"],
     yearsExperience: 2,
   },
@@ -21,7 +22,8 @@ export const portfolioData: FullPortfolio = {
       role: "Software Developer",
       company: "Aumble",
       duration: "Apr 2025 - Present",
-      description: "Leading cloud infrastructure and DevOps practices for enterprise applications.",
+      description:
+        "Leading cloud infrastructure and DevOps practices for enterprise applications.",
       achievements: [
         "Reduced deployment time by 60% through CI/CD pipeline optimization",
         "Implemented Kubernetes clusters serving 1M+ daily requests",
@@ -34,7 +36,8 @@ export const portfolioData: FullPortfolio = {
       role: "Full Stack Developer Intern",
       company: "To-Let Globe",
       duration: "Jan 2025 - Mar 2025",
-      description: "Developed and maintained scalable web applications from concept to deployment.",
+      description:
+        "Developed and maintained scalable web applications from concept to deployment.",
       achievements: [
         "Built responsive web applications serving 50k+ monthly users",
         "Designed RESTful APIs and microservices architecture",
@@ -47,7 +50,8 @@ export const portfolioData: FullPortfolio = {
       role: "Junior Developer",
       company: "Digital Agency",
       duration: "2021 - 2022",
-      description: "Started my journey in software development, building client websites and web apps.",
+      description:
+        "Started my journey in software development, building client websites and web apps.",
       achievements: [
         "Delivered 10+ client projects on time and within budget",
         "Learned best practices in agile development and version control",
@@ -60,8 +64,10 @@ export const portfolioData: FullPortfolio = {
     {
       id: "1",
       title: "Cloud Infrastructure Automation",
-      description: "Automated AWS infrastructure provisioning using Terraform and Ansible. Includes VPC, EKS clusters, RDS, and monitoring with CloudWatch.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=340&fit=crop",
+      description:
+        "Automated AWS infrastructure provisioning using Terraform and Ansible. Includes VPC, EKS clusters, RDS, and monitoring with CloudWatch.",
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=340&fit=crop",
       techStack: ["Terraform", "AWS", "Ansible", "Python"],
       githubUrl: "#",
       liveUrl: "#",
@@ -69,16 +75,20 @@ export const portfolioData: FullPortfolio = {
     {
       id: "2",
       title: "Kubernetes Deployment Platform",
-      description: "Built a self-service deployment platform for developers to deploy applications to Kubernetes with CI/CD integration and GitOps workflow.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=340&fit=crop",
+      description:
+        "Built a self-service deployment platform for developers to deploy applications to Kubernetes with CI/CD integration and GitOps workflow.",
+      image:
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=340&fit=crop",
       techStack: ["Kubernetes", "ArgoCD", "Helm", "Go"],
       githubUrl: "#",
     },
     {
       id: "3",
       title: "Real-time Analytics Dashboard",
-      description: "Full-stack web application for real-time data visualization with WebSocket streaming and responsive charts.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop",
+      description:
+        "Full-stack web application for real-time data visualization with WebSocket streaming and responsive charts.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop",
       techStack: ["React", "Node.js", "PostgreSQL", "Redis"],
       githubUrl: "#",
       liveUrl: "#",
@@ -86,8 +96,10 @@ export const portfolioData: FullPortfolio = {
     {
       id: "4",
       title: "Microservices E-commerce API",
-      description: "Scalable e-commerce backend with microservices architecture, event-driven communication, and containerized deployment.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=340&fit=crop",
+      description:
+        "Scalable e-commerce backend with microservices architecture, event-driven communication, and containerized deployment.",
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=340&fit=crop",
       techStack: ["Node.js", "Docker", "RabbitMQ", "MongoDB"],
       githubUrl: "#",
     },

@@ -1,8 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Cloud, Container, Code2, Wrench } from "lucide-react";
-import { useQuery } from "@tanstack/react-query";
-import type { Skill } from "@shared/schema";
+import { portfolioData } from "@/data/portfolio-data";
 import { SiAmazon, SiDocker, SiKubernetes, SiTerraform, SiReact, SiNextdotjs, SiNodedotjs, SiJavascript, SiTypescript, SiPython, SiPostgresql, SiMongodb, SiGithubactions, SiLinux, SiJenkins, SiPrometheus, SiGrafana } from "react-icons/si";
 
 const skillIcons: Record<string, React.ReactNode> = {
@@ -34,9 +33,8 @@ const categoryLabels = {
 };
 
 export function SkillsSection() {
-  const { data: skills, isLoading } = useQuery<Skill[]>({
-    queryKey: ["/api/portfolio/skills"],
-  });
+  const skills = portfolioData.skills;
+  const isLoading = false;
 
   const categories = ["cloud", "devops", "development", "tools"] as const;
 

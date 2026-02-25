@@ -3,13 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ExternalLink, Github, Folder } from "lucide-react";
-import { useQuery } from "@tanstack/react-query";
-import type { Project } from "@shared/schema";
+import { portfolioData } from "@/data/portfolio-data";
 
 export function ProjectsSection() {
-  const { data: projects, isLoading } = useQuery<Project[]>({
-    queryKey: ["/api/portfolio/projects"],
-  });
+  const projects = portfolioData.projects;
+  const isLoading = false;
 
   if (isLoading) {
     return (
