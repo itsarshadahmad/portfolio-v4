@@ -25,7 +25,10 @@ export function HeroSection() {
 
   if (isLoading) {
     return (
-      <section id="about" className="min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-24">
+      <section
+        id="about"
+        className="min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-24"
+      >
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-3 space-y-8">
@@ -54,16 +57,30 @@ export function HeroSection() {
     );
   }
 
-  const techStack = profile?.techStack || ["AWS", "Docker", "Kubernetes", "Terraform", "React", "Node.js"];
+  const techStack = profile?.techStack || [
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "Terraform",
+    "React",
+    "Node.js",
+  ];
   const name = profile?.name || "Your Name";
   const title = profile?.title || "Cloud & DevOps Engineer";
-  const bio = profile?.bio || "Building scalable cloud infrastructure and automating deployments. 2+ years of experience in full-stack development and DevOps practices, passionate about creating efficient, reliable systems.";
+  const bio =
+    profile?.bio ||
+    "Building scalable cloud infrastructure and automating deployments. 2+ years of experience in full-stack development and DevOps practices, passionate about creating efficient, reliable systems.";
   const yearsExperience = profile?.yearsExperience || 2;
-  const profileImage = profile?.profileImage || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face";
+  const profileImage =
+    profile?.profileImage ||
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face";
   const linkedIn = profile?.linkedIn || "https://linkedin.com/in/yourprofile";
 
   return (
-    <section id="about" className="min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-24">
+    <section
+      id="about"
+      className="min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-24"
+    >
       <div className="max-w-6xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-3 space-y-8 text-center lg:text-left">
@@ -110,11 +127,7 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button
-                size="lg"
-                asChild
-                data-testid="button-contact-cta"
-              >
+              <Button size="lg" asChild data-testid="button-contact-cta">
                 <a href={linkedIn} target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-4 h-4 mr-2" />
                   Connect on LinkedIn
@@ -150,7 +163,11 @@ export function HeroSection() {
                   className="object-cover rounded-2xl"
                 />
                 <AvatarFallback className="text-6xl rounded-2xl bg-gradient-to-br from-primary to-chart-3 text-primary-foreground">
-                  {name.split(" ").map(n => n[0]).join("").toUpperCase()}
+                  {name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")
+                    .toUpperCase()}
                 </AvatarFallback>
               </Avatar>
             </div>
