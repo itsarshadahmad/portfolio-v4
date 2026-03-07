@@ -33,7 +33,7 @@ export interface Project {
   liveUrl?: string;
 }
 
-export type SkillCategory = "cloud" | "devops" | "development" | "tools";
+export type SkillCategory = "backend" | "devops" | "frontend" | "tools";
 
 export interface Skill {
   name: string;

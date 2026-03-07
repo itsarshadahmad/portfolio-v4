@@ -1,34 +1,53 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Cloud, Container, Code2, Wrench } from "lucide-react";
+import { Cloud, Container, Code2, Wrench, ServerIcon } from "lucide-react";
 import { portfolioData } from "@/data/portfolio-data";
-import { SiAmazon, SiDocker, SiKubernetes, SiTerraform, SiReact, SiNextdotjs, SiNodedotjs, SiJavascript, SiTypescript, SiPython, SiPostgresql, SiMongodb, SiGithubactions, SiLinux, SiJenkins, SiPrometheus, SiGrafana } from "react-icons/si";
+import {
+  SiAmazon,
+  SiDocker,
+  SiKubernetes,
+  SiTerraform,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiPostgresql,
+  SiMongodb,
+  SiGithubactions,
+  SiLinux,
+  SiJenkins,
+  SiPrometheus,
+  SiGrafana,
+} from "react-icons/si";
+import SkillsSummary from "./skill-summary-section";
 
 const skillIcons: Record<string, React.ReactNode> = {
-  "AWS": <SiAmazon className="w-6 h-6" />,
+  AWS: <SiAmazon className="w-6 h-6" />,
   "IBM Cloud": <Cloud className="w-6 h-6" />,
-  "Docker": <SiDocker className="w-6 h-6" />,
-  "Kubernetes": <SiKubernetes className="w-6 h-6" />,
-  "Jenkins": <SiJenkins className="w-6 h-6" />,
-  "Terraform": <SiTerraform className="w-6 h-6" />,
-  "React": <SiReact className="w-6 h-6" />,
+  Docker: <SiDocker className="w-6 h-6" />,
+  Kubernetes: <SiKubernetes className="w-6 h-6" />,
+  Jenkins: <SiJenkins className="w-6 h-6" />,
+  Terraform: <SiTerraform className="w-6 h-6" />,
+  React: <SiReact className="w-6 h-6" />,
   "Next.js": <SiNextdotjs className="w-6 h-6" />,
   "Node.js": <SiNodedotjs className="w-6 h-6" />,
-  "JavaScript": <SiJavascript className="w-6 h-6" />,
-  "TypeScript": <SiTypescript className="w-6 h-6" />,
-  "Python": <SiPython className="w-6 h-6" />,
-  "PostgreSQL": <SiPostgresql className="w-6 h-6" />,
-  "MongoDB": <SiMongodb className="w-6 h-6" />,
+  JavaScript: <SiJavascript className="w-6 h-6" />,
+  TypeScript: <SiTypescript className="w-6 h-6" />,
+  Python: <SiPython className="w-6 h-6" />,
+  PostgreSQL: <SiPostgresql className="w-6 h-6" />,
+  MongoDB: <SiMongodb className="w-6 h-6" />,
   "GitHub Actions": <SiGithubactions className="w-6 h-6" />,
-  "Prometheus": <SiPrometheus className="w-6 h-6" />,
-  "Grafana": <SiGrafana className="w-6 h-6" />,
-  "Linux": <SiLinux className="w-6 h-6" />,
+  Prometheus: <SiPrometheus className="w-6 h-6" />,
+  Grafana: <SiGrafana className="w-6 h-6" />,
+  Linux: <SiLinux className="w-6 h-6" />,
 };
 
 const categoryLabels = {
-  cloud: { label: "Cloud", icon: <Cloud className="w-5 h-5" /> },
-  devops: { label: "DevOps", icon: <Container className="w-5 h-5" /> },
-  development: { label: "Development", icon: <Code2 className="w-5 h-5" /> },
+  frontend: { label: "Frontend", icon: <Code2 className="w-5 h-5" /> },
+  backend: { label: "Backend", icon: <ServerIcon className="w-5 h-5" /> },
+  devops: { label: "Cloud & DevOps", icon: <Cloud className="w-5 h-5" /> },
   tools: { label: "Tools", icon: <Wrench className="w-5 h-5" /> },
 };
 
@@ -36,7 +55,7 @@ export function SkillsSection() {
   const skills = portfolioData.skills;
   const isLoading = false;
 
-  const categories = ["cloud", "devops", "development", "tools"] as const;
+  const categories = ["devops", "frontend", "backend", "tools"] as const;
 
   if (isLoading) {
     return (
@@ -71,7 +90,8 @@ export function SkillsSection() {
             Technical Skills
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Technologies and tools I use to build scalable cloud solutions
+            Technologies and tools I use to ship scalable, production-ready
+            solutions
           </p>
         </div>
 
@@ -93,7 +113,9 @@ export function SkillsSection() {
                     >
                       <CardContent className="p-4 flex items-center gap-3">
                         <div className="text-primary">
-                          {skillIcons[skill.name] || <Code2 className="w-6 h-6" />}
+                          {skillIcons[skill.name] || (
+                            <Code2 className="w-6 h-6" />
+                          )}
                         </div>
                         <span className="font-medium text-foreground font-mono text-sm">
                           {skill.name}
@@ -104,6 +126,9 @@ export function SkillsSection() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="my-10">
+          <SkillsSummary />
         </div>
       </div>
     </section>

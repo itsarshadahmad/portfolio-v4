@@ -58,12 +58,12 @@ export function HeroSection() {
   }
 
   const techStack = profile?.techStack || [
+    "Next.js",
+    "React",
+    "Node.js",
     "AWS",
     "Docker",
     "Kubernetes",
-    "Terraform",
-    "React",
-    "Node.js",
   ];
   const name = profile?.name || "Your Name";
   const title = profile?.title || "Cloud & DevOps Engineer";

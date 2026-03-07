@@ -43,7 +43,8 @@ export function ExperienceSection() {
             Experience
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            My professional journey in software development and cloud engineering
+            My professional journey in software development and full stack
+            development
           </p>
         </div>
 
@@ -71,12 +72,17 @@ export function ExperienceSection() {
                           {exp.company}
                         </p>
                       </div>
-                      <Badge variant="outline" className="w-fit font-mono text-xs">
+                      <Badge
+                        variant="outline"
+                        className="w-fit font-mono text-xs"
+                      >
                         {exp.duration}
                       </Badge>
                     </div>
 
-                    <p className="text-muted-foreground mb-4">{exp.description}</p>
+                    <p className="text-muted-foreground mb-4">
+                      {exp.description}
+                    </p>
 
                     <ul className="space-y-2 mb-4">
                       {exp.achievements.map((achievement, i) => (
