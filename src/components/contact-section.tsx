@@ -29,6 +29,13 @@ export function ContactSection() {
     );
   }
 
+  const openMyCV = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault();
+        if (profile.resumeUrl) {
+            window.open(profile.resumeUrl, "_blank");
+        }
+    };
+
   const email = profile?.email || "your.email@example.com";
   const linkedIn = profile?.linkedIn || "https://linkedin.com/in/yourprofile";
   const github = profile?.github || "https://github.com/yourusername";
@@ -103,6 +110,7 @@ export function ContactSection() {
                     size="lg"
                     className="w-full sm:w-auto"
                     data-testid="button-download-resume"
+                    onClick={openMyCV}
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download Resume
